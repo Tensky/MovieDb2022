@@ -1,16 +1,30 @@
-
 ext.hilt_version = '2.38.1'
 ext.room_version = "2.4.0-alpha03"
 ext.paging_version = "3.1.1"
 ext.glide_version = "4.13.2"
-
-dependencies{
+ext.truth_version = "1.0.1"
+ext.mockk_version = "1.13.3"
+ext.mockito_version = "4.3.1"
+dependencies {
+    // DI
     implementation("com.google.dagger:hilt-android:$hilt_version")
     kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+    // Paging
     implementation("androidx.paging:paging-runtime:$paging_version")
     testImplementation("androidx.paging:paging-common:$paging_version")
+    // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    // VM
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-
+    // Testing
+        //Truth
+    testImplementation "com.google.truth:truth:1.0.1"
+    androidTestImplementation "com.google.truth:truth:1.0.1"
+        //Mockito
+    implementation "io.mockk:mockk:$mockk_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "org.mockito:mockito-inline:$mockito_version"
+        //Mock Web Server
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.9.3"
 }
