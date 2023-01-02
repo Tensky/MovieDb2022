@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieDb_2022</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guest_authenticate">Guest Authenticate</string>
+    <string name="trending">Trending</string>
+    <string name="discover">Discover</string>
+</resources>
